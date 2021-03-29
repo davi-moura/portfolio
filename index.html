@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="banner" id="sec">
-        <header>
-            <a href="#" class="logo">Logo</a>
-            <div id="toggle" onclick="toggle()"></div>
-        </header>
-        <div class="content">
-            <h2>Olá Mundo,<br>davi<span>moura abreu</span></h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error corrupti dolores aspernatur tempora praesentium beatae, debitis reiciendis aliquam odit eius quas, inventore quisquam corporis eaque dignissimos consectetur ipsam quod fugiat!</p>
-            <a href="#">Saiba Mais</a>
-        </div>
-        <ul class="sci">
-            <li><a href="#"><img src="img/facebook.png"></a></li>
-            <li><a href="#"><img src="img/twitter.png"></a></li>
-            <li><a href="#"><img src="img/linkedin.png"></a></li>
-        </ul>
-    </section>
-    <div id="navigation">
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <div class="toggle"></div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Trabalhos</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Contato</a></li>
         </ul>
-    </div>
+    </header>
+    <section class="banner">
+        <div class="textBx">
+            <h2>I am<br><span> Davi Moura</span></h2>
+            <h3>Olá Mundo</h3>
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+    <section class="about">
+        <div class="heading">
+            <h2>Sobre Me</h2>
+        </div>
+        <div class="content">
+            <div class="contentBx w50">
+                <h3>I am Davi Moura</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat velit culpa nisi soluta! Quam quis minima accusamus itaque impedit sit, ipsum ad expedita numquam autem temporibus saepe eaque cum sunt! Lorem ipsum dolor sit amet consectetur adipisicing elit.<br><br> Ducimus dicta amet praesentium explicabo! Officiis modi laboriosam veritatis voluptatibus, vitae culpa libero nam commodi iste ad maiores exercitationem quod? Quod, deserunt.<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. A recusandae modi at iste quod incidunt dignissimos iure est, eos maxime ipsa eveniet veritatis odit aliquid praesentium fugit possimus in odio?</p>
+            </div>
+            <div class="w50">
+                <img src="img/img1.jpg" class="img">
+            </div>
+        </div>
+    </section>
     <script type="text/javascript">
-    function toggle(){
-        var sec = document.getElementById('sec');
-        var nav = document.getElementById('navigation');
-        sec.classList.toggle('active');
-        nav.classList.toggle('active');
-    }
+      window.addEventListener('scroll', function(){
+          var header = document.querySelector('header');
+          header.classList.toggle('stricky', window.scrollY > 0);
+      });
     </script>
 </body>
 </html>
